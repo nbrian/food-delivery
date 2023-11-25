@@ -1,6 +1,6 @@
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
-// eslint-disable-next-line no-undef
-module.exports = {
+import type { Config } from '@jest/types';
+
+const config: Config.InitialOptions = {
 	preset: 'ts-jest',
 	testEnvironment: 'jsdom',
 	coverageDirectory: 'coverage',
@@ -8,4 +8,9 @@ module.exports = {
 	extensionsToTreatAsEsm: ['.ts', '.tsx'],
 	moduleDirectories: ['node_modules', './src'],
 	rootDir: './src',
+	verbose: true,
+	transform: {
+		'^.+\\.tsx?$': 'ts-jest',
+	},
 };
+export default config;
