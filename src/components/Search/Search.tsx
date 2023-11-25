@@ -10,8 +10,12 @@ const Search = ({ handleSearch }: tSearch) => {
 		handleSearch(e.target.value);
 	};
 	return (
-		<div data-testid='search'>
-			<input placeholder='Enter restaurant name...' onChange={onSearch} />
+		<div>
+			<input
+				data-testid='search'
+				placeholder='Enter restaurant name...'
+				onChange={onSearch}
+			/>
 			<SearchIcon />
 		</div>
 	);
