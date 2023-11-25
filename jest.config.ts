@@ -7,6 +7,9 @@ const config: Config.InitialOptions = {
 	coverageProvider: 'v8',
 	extensionsToTreatAsEsm: ['.ts', '.tsx'],
 	moduleDirectories: ['node_modules', './src'],
+	moduleNameMapper: {
+		'\\.(css|scss)$': 'identity-obj-proxy',
+	},
 	rootDir: './src',
 	verbose: true,
 	transform: {
