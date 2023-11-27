@@ -61,7 +61,13 @@ const Filter = ({ filters, handleSelect }: tFilter) => {
 	return (
 		<div data-testid='filter' role='filter' className={styles.filterContainer}>
 			<>
-				<input type='checkbox' id='all' checked={isAll} onChange={selectAll} />
+				<input
+					type='checkbox'
+					data-testid='filter-all'
+					id='all'
+					checked={isAll}
+					onChange={selectAll}
+				/>
 				<label htmlFor='all'>All</label>
 			</>
 			{filters.map((filter) => (
