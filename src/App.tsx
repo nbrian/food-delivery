@@ -1,11 +1,8 @@
 import './App.css';
+import FoodListPage from './pages/FoodListPage';
 
 function App() {
-	return (
-		<>
-			<h1>Food Delivery</h1>
-		</>
-	);
+	return <FoodListPage />;
 }
 
 export default App;
