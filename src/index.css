@@ -68,14 +68,63 @@ button:focus-visible {
 } */
 
 :root {
-  --background: white;
-  --text-primary: black;
-  --text-secondary: royalblue;
-  --accent: purple;
+	--background: #f7f8fa;
+	--text-primary: #2c2c2c;
+	--text-secondary: gray;
+	--accent: #ffc700;
+	--box-shadow-color: #e7e9eb;
+	--gray-background: #f7f8fa;
+	--card-flex-basis: none;
+	--app-container-margin: 0 auto;
 }
+
 [data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
-  --text-secondary: grey;
-  --accent: darkred;
+	--background: #2c2c2c;
+	--text-primary: white;
+	--text-secondary: darkgrey;
+	--accent: #ffc700;
+	--box-shadow-color: #2d2d2d;
+	--gray-background: #2c2c2c;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: light;
+	margin: 0;
+	background-color: var(--background);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	:root {
+		--card-flex-basis: none;
+	}
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	:root {
+		--card-flex-basis: calc(50% - 2rem);
+	}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	:root {
+		--card-flex-basis: calc(50% - 1rem);
+		/* --app-container-margin: 0 50px; */
+	}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	:root {
+		--card-flex-basis: calc(50% - 3rem);
+		--app-container-margin: 0 50px;
+	}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	:root {
+		--card-flex-basis: calc(33.3% - 2rem);
+	}
 }
