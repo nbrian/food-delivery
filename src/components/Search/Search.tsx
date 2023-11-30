@@ -1,5 +1,5 @@
 import { SearchIcon } from '@primer/octicons-react';
-import './Search.module.css';
+import styles from './Search.module.css';
 
 type tSearch = {
 	handleSearch: (keyword: string) => void;
@@ -10,7 +10,7 @@ const Search = ({ handleSearch }: tSearch) => {
 		handleSearch(e.target.value);
 	};
 	return (
-		<div>
+		<div className={styles.search}>
 			<input
 				data-testid='search'
 				placeholder='Enter restaurant name...'

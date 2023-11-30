@@ -1,81 +1,61 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+	--background: #f7f8fa;
+	--text-primary: #2c2c2c;
+	--text-secondary: gray;
+	--accent: #ffc700;
+	--box-shadow-color: #e7e9eb;
+	--gray-background: #f7f8fa;
+	--card-flex-basis: none;
+	--app-container-margin: 0 auto;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+[data-theme='dark'] {
+	--background: #2c2c2c;
+	--text-primary: white;
+	--text-secondary: darkgrey;
+	--accent: #ffc700;
+	--box-shadow-color: #2d2d2d;
+	--gray-background: #2c2c2c;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	font-family: Roboto, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: light;
+	margin: 0;
+	background-color: var(--background);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	:root {
+		--card-flex-basis: none;
+	}
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	:root {
+		--card-flex-basis: calc(50% - 2rem);
+	}
 }
-button:hover {
-  border-color: #646cff;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	:root {
+		--card-flex-basis: calc(50% - 1rem);
+		/* --app-container-margin: 0 50px; */
+	}
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	:root {
+		--card-flex-basis: calc(50% - 3rem);
+		--app-container-margin: 0 50px;
+	}
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-:root {
-  --background: white;
-  --text-primary: black;
-  --text-secondary: royalblue;
-  --accent: purple;
-}
-[data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
-  --text-secondary: grey;
-  --accent: darkred;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	:root {
+		--card-flex-basis: calc(33.3% - 2rem);
+	}
 }

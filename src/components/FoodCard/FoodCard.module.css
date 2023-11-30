@@ -1,0 +1,70 @@
+div.foodCard {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	font-size: 0.8rem;
+	color: var(--text-secondary);
+	line-height: 1.5;
+	box-shadow: 2px 2px 4px 4px var(--box-shadow-color);
+	width: 100%;
+	border-radius: 16px;
+	background-color: #fff;
+}
+span.promotion {
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #fff;
+	padding: 0.5rem;
+	width: 2rem;
+	background-color: aqua;
+	border-top-left-radius: inherit;
+	border-bottom-right-radius: 8px;
+}
+span.promotion[content='gift'] {
+	background-color: #00b2ff;
+}
+span.promotion[content='1+1'] {
+	background-color: #8f64ff;
+}
+span.promotion[content='discount'] {
+	background-color: #ff686f;
+}
+
+div.imgWrapper {
+	display: inline-block;
+}
+div.foodCard img {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	/* height: 70%; */
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+div.foodDetails {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 1rem;
+	justify-content: space-evenly;
+}
+div.foodDetails h5 {
+	font-size: 1rem;
+	margin: 0;
+}
+div.foodDetails div {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+}
+div.foodDetails div span {
+	background-color: var(--gray-background);
+	padding: 0.5rem;
+	border-radius: 8px;
+}
+div.foodDetails div span[content='new'] {
+	color: #41c7a0;
+}

@@ -20,14 +20,20 @@ const Filter = ({ filters, handleSelect }: tFilter) => {
 		setSelected((prev) => {
 			// 'All' is selected and the item is already in the selected list, keep only that item
 			if (isAll && selectedFilter) {
-				return [selectedFilter];
+				const s = [selectedFilter];
+				handleSelect(s);
+				return s;
 			}
 			// Not 'All' and the item is already selected, remove it from the selection
 			else if (!isAll && selectedFilter) {
-				return prev.filter((f) => f.id !== selectedItem);
+				const s = prev.filter((f) => f.id !== selectedItem);
+				handleSelect(s);
+				return s;
 			}
 			// Not 'All' and the item is not selected, add it to the selection
 			else if (!isAll && filter) {
+				const s = [...prev, filter];
+				handleSelect(s);
 				return [...prev, filter];
 			}
 
@@ -55,8 +61,7 @@ const Filter = ({ filters, handleSelect }: tFilter) => {
 			selected.length === filters.length &&
 				selected.every((s) => filters.some((f) => s.id === f.id))
 		);
-		handleSelect(selected);
-	}, [filters, handleSelect, selected]);
+	}, [selected, filters]);
 
 	return (
 		<div data-testid='filter' role='filter' className={styles.filterContainer}>
