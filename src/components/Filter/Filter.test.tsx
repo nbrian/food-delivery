@@ -1,30 +1,16 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Filter from './Filter';
+import { MOCK_CATEGORIES } from '../../mocks/mockData';
 
 afterEach(() => {
 	cleanup();
 });
 
 describe('Search Component', () => {
-	const filters = [
-		{
-			id: '0',
-			name: 'Shushi',
-		},
-		{
-			id: '1',
-			name: 'Pizza',
-		},
-		{
-			id: '2',
-			name: 'Pizzas',
-		},
-	];
-
 	const handleSelect = jest.fn();
 
-	render(<Filter handleSelect={handleSelect} filters={filters} />);
+	render(<Filter handleSelect={handleSelect} filters={MOCK_CATEGORIES} />);
 	const filter = screen.getByTestId('filter');
 
 	test('Component rendered', () => {
@@ -33,7 +19,7 @@ describe('Search Component', () => {
 		);
 
 		expect(filter).toBeInTheDocument();
-		expect(allCheckboxes).toHaveLength(filters.length + 1);
+		expect(allCheckboxes).toHaveLength(MOCK_CATEGORIES.length + 1);
 	});
 
 	test('All option is checked by default', () => {
