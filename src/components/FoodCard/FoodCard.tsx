@@ -38,7 +38,10 @@ const FoodCard = ({ food }: tFood) => {
 				<h5>{food.name}</h5>
 				<div>
 					<span>
-						<StarFillIcon /> {food.rating}
+						<StarFillIcon />{' '}
+						{Number.isInteger(food.rating)
+							? food.rating
+							: food.rating.toFixed(1)}
 					</span>
 					<span>
 						{food.minCookTime}-{food.maxCookTime} min
