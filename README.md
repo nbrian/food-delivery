@@ -1,30 +1,59 @@
 # Food Delivery
 
-This is a Food Delivery page sample that is written in React and generated using Vite with HMR and some ESLint rules.
+This project that is written in React and generated using Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a Food List page sample that lists food from different restaurants. The page can be searched via `Restaurant name` or filtered by `Category`. The app connects to 2 mock APIs for Food List and Category List.
 
-## Expanding the ESLint configuration
+### Project structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Under `src` are the main files used
 
-- Configure the top-level `parserOptions` property like this:
+- components - includes feature components as well as ui components
+- lib - different libraries to be used for the app (types, mocks, utils)
+- pages - page components
 
-```js
-export default {
-	// other rules...
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		project: ['./tsconfig.json', './tsconfig.node.json'],
-		tsconfigRootDir: __dirname,
-	},
-};
+### Libraries
+
+These are the main libraries used for this project:
+
+- @primer/octicons-react - icons by github
+- vite - an alternative to create-react-app with minimal app templating
+- prettier - code formatter
+- jest - testing framework
+
+## How to Use the Project
+
+- open terminal
+- insall dependencies
+
+```bash
+	npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- run application
+
+```bash
+	npm run dev
+```
+
+### To run test
+
+- open termianl
+- run test script
+
+```bash
+	npm run test
+```
+
+## Future upgrades
+
+- Better API structure
+  - Currently the API we're using doesn't have pagination. For better user experience and loading, pagination will help lessen the loading time.
+- UI/UX
+  - Skeleton loading for each cards while the API is still fetching data
+- Integration testing
+  - Test the `FoodListPage` to simulate the interaction of the different components
+- Routing
+  - Using React DOM to navigate to pages
