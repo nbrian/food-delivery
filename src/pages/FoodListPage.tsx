@@ -63,7 +63,7 @@ const FoodListPage = () => {
 		console.log(fil);
 		return foods.filter(
 			(food) =>
-				food.name.toLowerCase().includes(keyword.toLowerCase()) &&
+				food.restaurant.toLowerCase().includes(keyword.toLowerCase()) &&
 				fil.includes(food.categoryId)
 		);
 	};

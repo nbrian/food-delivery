@@ -2,7 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import FoodCard from './FoodCard';
 import { Food } from '../../lib/types/food';
-import { MOCK_FOODS } from '../../mocks/mockData';
+import { MOCK_FOODS } from '../../lib/mocks/mockData';
 
 afterEach(() => {
 	cleanup();
