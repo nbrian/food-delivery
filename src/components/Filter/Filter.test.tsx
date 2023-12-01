@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Filter from './Filter';
-import { MOCK_CATEGORIES } from '../../mocks/mockData';
+import { MOCK_CATEGORIES } from '../../lib/mocks/mockData';
 
 afterEach(() => {
 	cleanup();
